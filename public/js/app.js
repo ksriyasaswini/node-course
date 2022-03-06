@@ -25,12 +25,13 @@ weatherForm.addEventListener('submit', (e) => {
     response.json().then((data) => {
         if(data.error) {
             messageOne.textContent = (data.error)
+            messageTwo.textContent = 'Loading...'
         }
         else {
             messageOne.textContent = data.address
             messageTwo.textContent = data.Info
             console.log(data.address)
-            console.log(Info)
+            console.log(data.Info)
             console.log(Location)
         }
     })
